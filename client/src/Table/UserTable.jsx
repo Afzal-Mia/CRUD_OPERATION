@@ -63,14 +63,11 @@ export default function UserTable() {
     }
     return (
         <>
-            <Table Deletuser={deletuser} UpdatedUser={UpadteUserData}></Table>
+            <Table Deletuser={deletuser} UpdatedUserData={UpadteUserData}></Table>
 
             <AddUser></AddUser>
             <UpdatedUser handleOnSubmit={handleOnSubmit} value={value} handlechange={handlechange}></UpdatedUser>
             <DeletUser handleUserDelet={handleUserDelet} ></DeletUser>
-
-
-
 
         </>
     )

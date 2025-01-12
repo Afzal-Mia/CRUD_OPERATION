@@ -1,13 +1,7 @@
 import React, { useState } from 'react'
-
 export default function UpdatedUser({ handleOnSubmit, value, handlechange }) {
-
-
-
     return (
         <>
-
-
             <div id="editEmployeeModal" className="modal fade">
                 <div className="modal-dialog">
                     <div className="modal-content">
@@ -44,9 +38,6 @@ export default function UpdatedUser({ handleOnSubmit, value, handlechange }) {
                     </div>
                 </div>
             </div>
-
-
-
         </>
     )
 }

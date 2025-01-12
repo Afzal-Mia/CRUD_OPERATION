@@ -2,8 +2,6 @@ import React, { useRef, useState } from 'react'
 import axios from 'axios'
 import toast from 'react-hot-toast';
 
-
-
 export default function AddUser() {
     const [value, setValue] = useState({
         name: '',
@@ -17,8 +15,6 @@ export default function AddUser() {
             [e.target.name]: e.target.value
         })
     };
-
-
     const CloseRef = useRef()
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -35,13 +31,9 @@ export default function AddUser() {
         } catch (error) {
             console.log(error)
         }
-
-
     };
     return (
         <>
-
-
             <div id="addEmployeeModal" className="modal fade">
                 <div className="modal-dialog">
                     <div className="modal-content">
