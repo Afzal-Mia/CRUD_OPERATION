@@ -21,13 +21,13 @@ This app is designed to demonstrate basic CRUD operations on a list of employees
 
 Here are some screenshots of the app in action:
 
-### 1. **Login / Home Page** 👥:
+### 1. **Home Page** 👥:
 Welcome to the app! Here, you can view the list of employees and perform CRUD operations.
 ![Home Page](client/public/preview_2.png)
 
 ### 2. **Add Employee Modal** ➕:
 Easily add new employees through this intuitive modal.
-![Add Employee](client/public/preview_2.png)
+![Add Employee](client/public/preview_3.png)
 
 ### 3. **Edit Employee Modal** ✏️:
 Edit existing employee details in this user-friendly modal.
