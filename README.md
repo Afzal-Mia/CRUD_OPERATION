@@ -47,7 +47,6 @@ Follow these steps to get the project up and running:
 Clone both the **frontend** and **backend** repositories to your local machine.
 
 ```bash
-git clone https://github.com/Afzal-Mia/CRUD_OPERATION.git
 
 ## **Contributing** 🤝✨
 
@@ -67,3 +66,4 @@ If you encounter bugs or have suggestions for improvements, please open an issue
 
 Your contributions are always welcome! 🙌
 
+git clone https://github.com/Afzal-Mia/CRUD_OPERATION.git
