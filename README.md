@@ -23,7 +23,7 @@ Here are some screenshots of the app in action:
 
 ### 1. **Login / Home Page** 👥:
 Welcome to the app! Here, you can view the list of employees and perform CRUD operations.
-![Home Page](client/public/preview_1.png)
+![Home Page](client/public/preview_2.png)
 
 ### 2. **Add Employee Modal** ➕:
 Easily add new employees through this intuitive modal.
@@ -35,7 +35,7 @@ Edit existing employee details in this user-friendly modal.
 
 ### 4. **Delete Employee Confirmation** 🗑️:
 Confirm before deleting an employee to avoid accidental deletions.
-![Delete Employee](client/public/preview_4.png)
+![Delete Employee](client/public/preview_1.png)
 
 ---
 
