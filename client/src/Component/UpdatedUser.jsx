@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react';
+
 export default function UpdatedUser({ handleOnSubmit, value, handlechange }) {
     return (
         <>
@@ -13,21 +14,43 @@ export default function UpdatedUser({ handleOnSubmit, value, handlechange }) {
                             <div className="modal-body">
                                 <div className="form-group">
                                     <label>Name</label>
-                                    <input type="text" value={value.name} name='name' onChange={handlechange} className="form-control" />
+                                    <input
+                                        type="text"
+                                        value={value.name || ''}
+                                        name="name"
+                                        onChange={handlechange}
+                                        className="form-control"
+                                    />
                                 </div>
                                 <div className="form-group">
                                     <label>Father</label>
-                                    <input type="text" value={value.fathername} name='fathername' onChange={handlechange} className="form-control" />
+                                    <input
+                                        type="text"
+                                        value={value.fathername || ''}
+                                        name="fathername"
+                                        onChange={handlechange}
+                                        className="form-control"
+                                    />
                                 </div>
                                 <div className="form-group">
                                     <label>Email</label>
-                                    <input type="text" value={value.email} name='email' onChange={handlechange} className="form-control" />
-
+                                    <input
+                                        type="text"
+                                        value={value.email || ''}
+                                        name="email"
+                                        onChange={handlechange}
+                                        className="form-control"
+                                    />
                                 </div>
                                 <div className="form-group">
                                     <label>Phone</label>
-
-                                    <input type="text" value={value.phone} name='phone' onChange={handlechange} className="form-control" />
+                                    <input
+                                        type="text"
+                                        value={value.phone || ''}
+                                        name="phone"
+                                        onChange={handlechange}
+                                        className="form-control"
+                                    />
                                 </div>
                             </div>
                             <div className="modal-footer">
@@ -39,5 +62,5 @@ export default function UpdatedUser({ handleOnSubmit, value, handlechange }) {
                 </div>
             </div>
         </>
-    )
+    );
 }

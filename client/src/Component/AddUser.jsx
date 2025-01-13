@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import axios from 'axios'
 import toast from 'react-hot-toast';
 
-export default function AddUser() {
+export default function AddUser({baseUrl}) {
     const [value, setValue] = useState({
         name: '',
         fathername: '',
@@ -20,13 +20,19 @@ export default function AddUser() {
         e.preventDefault();
 
         try {
-            const adduser = await axios.post('http://localhost:8000/api/create', value)
+            const adduser = await axios.post(`${baseUrl}/api/create`, value)
             const response = adduser.data
             if (response.success) {
-                toast.success(response.Message)
+                toast.success(response.message)
                 CloseRef.current.click()
 
             }
+            setValue({
+                name: '',
+                fathername: '',
+                email: '',
+                phone: ""
+            })
             console.log(response)
         } catch (error) {
             console.log(error)
@@ -35,7 +41,7 @@ export default function AddUser() {
     return (
         <>
             <div id="addEmployeeModal" className="modal fade">
-                <div className="modal-dialog">
+                <div className="modal-dialog ">
                     <div className="modal-content">
                         <form onSubmit={handleSubmit}>
                             <div className="modal-header">

@@ -1,15 +1,14 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-export default function Table({ Deletuser, UpdatedUserData }) {
+export default function Table({ Deletuser, UpdatedUserData, baseUrl }) {
     const [data, setData] = useState([])
-
 
 
     useEffect(() => {
         async function FeatchData() {
             try {
-                const user = await axios.get('http://localhost:8000/api/get')
+                const user = await axios.get(`${baseUrl}/api/get`)
                 const response = user.data
                 // console.log(response.users)
                 setData(response)
@@ -39,41 +38,56 @@ export default function Table({ Deletuser, UpdatedUserData }) {
                             </div>
                         </div>
                     </div>
-                    <table className="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Name</th>
-                                <th>Father</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {data.users?.map((elem, index) => {
-                                return (
-                                    <tr>
-                                        <td></td>
+                    <div className="table-responsive">
+                        <table className="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Name</th>
+                                    <th>Father</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {data.users?.map((elem, index) => (
+                                    <tr key={index}>
+                                        <td>{index + 1}</td>
                                         <td>{elem.name}</td>
                                         <td>{elem.fathername}</td>
-                                        <td>{elem.email}</td>
+                                        <td style={{ wordBreak: 'break-word' }}>{elem.email}</td>
                                         <td>{elem.phone}</td>
                                         <td>
-                                            <a href="#" className="edit cursor-pointer" data-bs-toggle="modal" data-bs-target="#editEmployeeModal" onClick={() => UpdatedUserData(elem._id)}>
-                                                <i className="material-icons" data-bs-toggle="tooltip" title="Edit">&#xE254;</i>
+                                            <a
+                                                href="#"
+                                                className="edit cursor-pointer"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#editEmployeeModal"
+                                                onClick={() => UpdatedUserData(elem._id)}
+                                            >
+                                                <i className="material-icons" data-bs-toggle="tooltip" title="Edit">
+                                                    &#xE254;
+                                                </i>
                                             </a>
-                                            <a href="#" className="delete cursor-pointer" data-bs-toggle="modal" data-bs-target="#deleteEmployeeModal" onClick={() => Deletuser(elem._id)}>
-                                                <i className="material-icons" data-bs-toggle="tooltip" title="delete" >&#xE872;</i>
+                                            <a
+                                                href="#"
+                                                className="delete cursor-pointer"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#deleteEmployeeModal"
+                                                onClick={() => Deletuser(elem._id)}
+                                            >
+                                                <i className="material-icons" data-bs-toggle="tooltip" title="Delete">
+                                                    &#xE872;
+                                                </i>
                                             </a>
-                                            {/* <a className="delete" data-bas-toggle='modal' data-bs-target='#deleteEmployeeModal'><i className="material-icons" data-bs-toggle="tooltip" title="Delete">&#xE872;</i></a> */}
                                         </td>
                                     </tr>
-                                )
-                            })}
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
 
-                        </tbody>
-                    </table>
                 </div>
             </div >
 
