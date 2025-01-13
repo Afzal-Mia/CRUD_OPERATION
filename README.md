@@ -31,7 +31,7 @@ Easily add new employees through this intuitive modal.
 
 ### 3. **Edit Employee Modal** ✏️:
 Edit existing employee details in this user-friendly modal.
-![Edit Employee](client/public/preview_3.png)
+![Edit Employee](client/public/preview_4.png)
 
 ### 4. **Delete Employee Confirmation** 🗑️:
 Confirm before deleting an employee to avoid accidental deletions.
